@@ -68,6 +68,17 @@ macOS / Xcode 26.6で、ルートから `swift Scripts/verify.swift` を実行�
 | [workflow-error.yml](.github/workflows/workflow-error.yml) | Workflow error |
 | [yaml-syntax-error.yml](.github/workflows/yaml-syntax-error.yml) | YAML error |
 
+## 振る舞いの回帰テスト
+
+実行時の挨拶とテストする挨拶を同じ処理へ揃え、偶奇判定の引数ラベルを呼び出し時に読みやすい形へ整理します。Quality CIは実行ファイルの出力も確認します。
+
+Swift Testingの引数付きテストでInt.min／Int.max・負数・ゼロ・正数を検証し、実行結果Hello, WorldをCIで照合します。
+
+```sh
+swift test
+swift run github-actions-practice
+```
+
 ## Swiftコード品質
 
 [設計・命名・所有関係の方針と、この教材への適用範囲](SWIFT-QUALITY.md)を参照してください。

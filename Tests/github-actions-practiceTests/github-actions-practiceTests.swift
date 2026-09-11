@@ -1,32 +1,17 @@
 import Testing
 @testable import github_actions_practice
 
-@Test("Hello, Worldが返ること")
+@Test("実行時と共通の挨拶を返す")
 func greeting() {
-    let target = GitHubActionsPractice()
-    #expect(target.greeting() == "Hello, World")
+    #expect(GitHubActionsPractice().greeting() == "Hello, World")
 }
 
-@Test("偶数の場合にtrueが返ること")
-func isEvenReturnsTrueWhenEven() {
-    let target = GitHubActionsPractice()
-    #expect(target.isEven(number: 2))
-}
-
-@Test("奇数の場合にfalseが返ること")
-func isEvenReturnsFalseWhenOdd() {
-    let target = GitHubActionsPractice()
-    #expect(!target.isEven(number: 3))
-}
-
-@Test("奇数の場合にtrueが返ること")
-func isOddReturnsTrueWhenOdd() {
-    let target = GitHubActionsPractice()
-    #expect(target.isOdd(number: 3))
-}
-
-@Test("偶数の場合にfalseが返ること")
-func isOddReturnsFalseWhenEven() {
-    let target = GitHubActionsPractice()
-    #expect(!target.isOdd(number: 2))
+@Test("負数・ゼロ・整数の境界でも偶奇を判定する", arguments: [
+    (Int.min, true), (-3, false), (-2, true), (-1, false),
+    (0, true), (1, false), (2, true), (3, false), (Int.max, false)
+])
+func parity(number: Int, isEven: Bool) {
+    let example = GitHubActionsPractice()
+    #expect(example.isEven(number) == isEven)
+    #expect(example.isOdd(number) == !isEven)
 }

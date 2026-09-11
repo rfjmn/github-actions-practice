@@ -4,18 +4,18 @@
 @main
 struct GitHubActionsPractice {
     static func main() {
-        print("Hello, world")
+        print(Self().greeting())
     }
 
     func greeting() -> String {
         "Hello, World"
     }
 
-    func isEven(number: Int) -> Bool {
+    func isEven(_ number: Int) -> Bool {
         number % 2 == 0
     }
 
-    func isOdd(number: Int) -> Bool {
-        !isEven(number: number)
+    func isOdd(_ number: Int) -> Bool {
+        !isEven(number)
     }
 }

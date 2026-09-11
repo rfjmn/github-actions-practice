@@ -45,3 +45,6 @@ jobs:
         env:
           TARGET_INDEX: ${{ matrix.index }}
         run: swift Scripts/verify.swift --index "$TARGET_INDEX"
+      - name: Verify executable output
+        if: matrix.name == 'github-actions-practice'
+        run: test "$(swift run github-actions-practice)" = 'Hello, World'

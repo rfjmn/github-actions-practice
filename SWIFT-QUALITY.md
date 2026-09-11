@@ -4,6 +4,10 @@
 
 SwiftUIの静的な挨拶画面はViewの値型とbodyの構成を維持します。CLIの型はGitHubActionsPracticeとし、パッケージ名と型名を区別します。状態や業務処理を追加する場合はViewModel・UseCaseを分けます。
 
+実行時の挨拶とテストする挨拶を同じ処理へ揃え、偶奇判定の引数ラベルを呼び出し時に読みやすい形へ整理します。Quality CIは実行ファイルの出力も確認します。
+
+Swift Testingの引数付きテストでInt.min／Int.max・負数・ゼロ・正数を検証し、実行結果Hello, WorldをCIで照合します。
+
 ## 共通の設計基準
 
 - 型・メンバーは必要な範囲だけに公開します。内部状態は`private`、外部から読む状態は必要に応じて`private(set)`にします。プロトコルの要件、Storyboardの接続、サブクラスからの利用を確認して変更します。
