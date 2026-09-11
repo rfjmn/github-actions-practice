@@ -67,3 +67,7 @@ macOS / Xcode 26.6で、ルートから `swift Scripts/verify.swift` を実行�
 | [workflow-commands-debug-log.yml](.github/workflows/workflow-commands-debug-log.yml) | Debug log |
 | [workflow-error.yml](.github/workflows/workflow-error.yml) | Workflow error |
 | [yaml-syntax-error.yml](.github/workflows/yaml-syntax-error.yml) | YAML error |
+
+## Swiftコード品質
+
+[設計・命名・所有関係の方針と、この教材への適用範囲](SWIFT-QUALITY.md)を参照してください。
