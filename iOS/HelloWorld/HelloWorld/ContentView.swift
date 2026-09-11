@@ -1,12 +1,6 @@
-//
-//  ContentView.swift
-//  HelloWorld
-//
-//  Created by 藤門莉生 on 2026/05/07.
-//
-
 import SwiftUI
 
+/// CI でビルドする最小構成のサンプル画面。地球のシンボルと挨拶を表示します。
 struct ContentView: View {
     var body: some View {
         VStack {

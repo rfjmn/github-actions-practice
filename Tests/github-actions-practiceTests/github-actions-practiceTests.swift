@@ -1,10 +1,3 @@
-//
-//  github-actions-practiceTests.swift
-//  github-actions-practice
-//
-//  Created by 藤門莉生 on 2026/05/03.
-//
-
 import Testing
 @testable import github_actions_practice
 

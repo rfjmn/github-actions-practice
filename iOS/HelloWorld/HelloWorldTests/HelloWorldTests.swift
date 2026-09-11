@@ -1,10 +1,3 @@
-//
-//  HelloWorldTests.swift
-//  HelloWorldTests
-//
-//  Created by 藤門莉生 on 2026/05/07.
-//
-
 import Testing
 @testable import HelloWorld
 
